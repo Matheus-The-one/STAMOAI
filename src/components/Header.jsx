@@ -38,7 +38,7 @@ const Header = () => {
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
         
-          <h1 className="flex items-center justify-center"><img src={brainwaveSymbol} alt="" width={30}height={30} />STAMO.AI</h1>
+          <h1 className="flex p-0 m-0 items-center justify-center"><img src={brainwaveSymbol} alt="stamo" width={130}height={100} /></h1>
         </a>
 
         <nav
