@@ -31,7 +31,7 @@ const Benefits = () => {
                     src={item.iconUrl}
                     width={48}
                     height={48}
-                    alt={item.title}
+                    alt={`Icon representing ${item.title}`}
                   />
                   <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Explore more
@@ -52,11 +52,10 @@ const Benefits = () => {
                       src={item.imageUrl}
                       width={380}
                       height={362}
-                      alt={item.title}
+                      alt={`Image showcasing ${item.title}`}
                       className="w-full h-full object-cover"
                     />
                   )}
-                  
                 </div>
               </div>
 
