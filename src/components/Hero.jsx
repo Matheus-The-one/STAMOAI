@@ -36,8 +36,12 @@ const Hero = () => {
             </span>
           </h1>
           
-          <Button href="/pricing" white>
-            Get started
+          <Button className="mx-4" href="/pricing" >
+            Generate here
+          </Button>
+          
+          <Button className="m-4 mx-8" href="/pricing" >
+            Get Extension
           </Button>
          
         </div>
