@@ -33,6 +33,7 @@ import {
   sliders04,
   telegram,
   twitter,
+  video4,
   yourlogo,
 } from "../assets";
 
@@ -284,7 +285,7 @@ export const benefits = [
     title: "",
     text: "",
     backgroundUrl: "/src/assets/benefits/card-4.svg",
-    videoUrl:"/src/assets/benefits/F1.mp4",
+    videoUrl:video4,
     imageUrl: benefitImage2,
     light: true,
   },
