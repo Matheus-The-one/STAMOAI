@@ -1,3 +1,5 @@
+'use client'
+
 import { benefits } from "../constants";
 import Heading from "./Heading";
 import Section from "./Section";
@@ -5,7 +7,9 @@ import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 
+
 const Benefits = () => {
+ 
   return (
     <Section id="features">
       <div className="container relative z-2">
@@ -25,16 +29,13 @@ const Benefits = () => {
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
-                <p className="body-2 mb-6 text-n-3">{item.text}</p>
+                <video className="rounded-2xl" autoPlay loop src={item.videoUrl}></video>
+
+  
                 <div className="flex items-center mt-auto">
-                  <img
-                    src={item.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={`Icon representing ${item.title}`}
-                  />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
+                  
+                  <p className=" my-3 ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                    Blog Link
                   </p>
                   <Arrow />
                 </div>
