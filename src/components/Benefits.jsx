@@ -6,10 +6,43 @@ import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
-
+import { useEffect, useRef } from 'react';
 
 const Benefits = () => {
- 
+  
+  function VideoComponent({ videoUrl }) {
+    const videoRef = useRef(null);
+  
+    useEffect(() => {
+      const videoElement = videoRef.current;
+
+      const handleUserInteraction = () => {
+        videoElement.muted = true;
+        videoElement.play();
+      };
+
+      window.addEventListener('click', handleUserInteraction, { once: true });
+      window.addEventListener('scroll', handleUserInteraction, { once: true });
+
+      return () => {
+        window.removeEventListener('click', handleUserInteraction);
+        window.removeEventListener('scroll', handleUserInteraction);
+      };
+    }, []);
+
+    return (
+      <video
+  ref={videoRef}
+  loop
+  src={videoUrl}
+  className="border-4 border-gray-700 rounded-lg w-full max-w-xl 
+             shadow-inner"
+/>
+
+
+    );
+  }
+
   return (
     <Section id="features">
       <div className="container relative z-2">
@@ -22,17 +55,18 @@ const Benefits = () => {
           {benefits.map((item) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]"
-              
+              style={{
+                backgroundImage: `url(${item.backgroundUrl})`,
+              }}
               key={item.id}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <h5 className="h5 mb-5">{item.title}</h5>
-                <video className="rounded-2xl" autoPlay loop src={item.videoUrl}></video>
 
-  
+                <VideoComponent videoUrl={item.videoUrl} />
+
                 <div className="flex items-center mt-auto">
-                  
-                  <p className=" my-3 ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
+                  <p className="my-3 ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
                     Blog Link
                   </p>
                   <Arrow />
