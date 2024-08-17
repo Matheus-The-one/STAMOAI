@@ -34,6 +34,7 @@ import {
   telegram,
   twitter,
   video4,
+  video5,
   yourlogo,
 } from "../assets";
 
@@ -294,7 +295,7 @@ export const benefits = [
     title: "",
     text: "",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
-    videoUrl:"/src/assets/benefits/merged_video.mp4",
+    videoUrl:video5,
     imageUrl: benefitImage2,
   },
   {
