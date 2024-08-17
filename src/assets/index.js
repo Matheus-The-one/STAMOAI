@@ -76,7 +76,9 @@ import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
 import video4 from './benefits/F1.mp4'
 import video5 from './benefits/merged_video.mp4'
+import video3 from './benefits/3.mp4'
 export {
+  video3,
   video5,
   video4,
   brainwave,
