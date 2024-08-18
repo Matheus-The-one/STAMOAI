@@ -16,7 +16,7 @@ const Collaboration = () => {
           <ul className="max-w-[22rem] mb-10 md:mb-14">
             {collabContent.map((item) => (
               <li className="mb-3 py-3" key={item.id}>
-                <div className="flex items-center">
+                <div className="flex items-center ">
                   <img src={check} width={24} height={24} alt="check" />
                   <h6 className="body-2 ml-5">{item.title}</h6>
                 </div>
@@ -40,9 +40,10 @@ const Collaboration = () => {
               <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                 <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                   <img
+                  
                     src={brainwaveSymbol}
-                    width={48}
-                    height={48}
+                    width={70}
+                    height={70}
                     alt="StamoAi"
                   />
                 </div>
@@ -58,7 +59,7 @@ const Collaboration = () => {
                   }`}
                 >
                   <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${
+                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-white border border-n-1/15 rounded-xl -rotate-${
                       index * 45
                     }`}
                   >
