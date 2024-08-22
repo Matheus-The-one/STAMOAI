@@ -68,10 +68,14 @@ import facebook from "./socials/facebook.svg";
 import instagram from "./socials/instagram.svg";
 import telegram from "./socials/telegram.svg";
 import twitter from "./socials/twitter.svg";
-import video4 from './benefits/F1.mp4'
-import video5 from './benefits/merged_video.mp4'
-import video3 from './benefits/3.mp4'
+import video4 from './benefits/4.mp4';
+import video5 from './benefits/5.mp4';
+import video3 from './benefits/3.mp4';
+import video1 from './benefits/1.mp4';
+import video2 from './benefits/2.mp4'
 export {
+  video2,
+  video1,
   video3,
   video5,
   video4,

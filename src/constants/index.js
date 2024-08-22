@@ -1,4 +1,6 @@
 import {
+  video1,
+  video2,
   benefitIcon1,
   benefitIcon2,
   benefitIcon3,
@@ -265,7 +267,7 @@ export const benefits = [
     title: "",
     text: "",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
-   
+    videoUrl:video1,
     imageUrl: benefitImage2,
     
   },
@@ -274,7 +276,7 @@ export const benefits = [
     title: "",
     text: "",
     backgroundUrl: "/src/assets/benefits/card-2.svg",
-    
+    videoUrl:video2,
     imageUrl: benefitImage2,
     light: true,
   },
