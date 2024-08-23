@@ -218,46 +218,51 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Basic",
-    description: "AI chatbot, personalized recommendations",
-    price: "0",
+    title: "Free Triel",
+    description: "1 Week",
+    price: "0.00",
     features: [
-      "Only 3 Animated Videos",
-      "Access to a library of royalty-free music tracks to enhance your videos",
-      "Option to watermark your videos with your logo for a professional touch.",
+      "Unlimited Generations",
+      "Limited Downloads",
+      "Time Limit: 1 week",
     ],
   },
   {
     id: "1",
     title: "Premium",
     description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "19.99",
+    price: "5.99",
     features: [
-      "Unlimited Video Genartion 10 video downloads",
-      "Georgian Voice Integration In Video ",
-      "Limited Castumizations and Models",
+      "Unlimited Generations",
+      "10 Videos Downlaod",
+      "Watermark removal",
+      "Automated caption"
     ],
   },
   {
     id: "2",
-    title: "Premium Organization",
+    title: "Premium +",
     description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: "99.9",
+    price: "14.9",
     features: [
-      "Monthly unlimited Generations and Downloads",
-      "Diffrent Types Of Voice Integration",
-      "Ability to explore the app and its features without any cost",
+      "Unlimited Downloads",
+      "AI voiceover",
+      "Access to specially trained AI models",
+      "Video costumization",
+      "Uploading or choosing text fonts",
+      "Including all features of premium version"
     ],
   },
   {
     id: "3",
-    title: "Enterprise+",
+    title: "Enterprise",
     description: "Custom AI chatbot, advanced analytics, dedicated account",
     price: null,
     features: [
-      "ALL Included From Premium Organization Packet ",
-      "Full Costumization On Video,Voice and PreTrained Models For The Brand  ",
-      "7 Users From Team",
+      "Api integrations",
+      "Bussines proposals",
+      "Any kind of question"
+
     ],
   },
 ];
