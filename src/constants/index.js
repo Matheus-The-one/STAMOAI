@@ -218,7 +218,7 @@ export const collabApps = [
 export const pricing = [
   {
     id: "0",
-    title: "Free Triel",
+    title: "Freemium",
     description: "1 Week",
     price: "0.00",
     features: [
@@ -234,7 +234,7 @@ export const pricing = [
     price: "14.99",
     features: [
       "Unlimited Generations",
-      "10 Videos Downlaod",
+      "10 Videos downlaod",
       "Watermark removal",
       "Automated caption"
     ],
@@ -243,12 +243,12 @@ export const pricing = [
     id: "2",
     title: "Premium +",
     description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: "24.9",
+    price: "24.99",
     features: [
       "Unlimited Downloads",
       "AI voiceover",
       "Access to specially trained AI models",
-      "Video costumization",
+      "Video custumization",
       "Uploading or choosing text fonts",
       "Including all features of premium version"
     ],
@@ -259,9 +259,9 @@ export const pricing = [
     description: "Custom AI chatbot, advanced analytics, dedicated account",
     price: null,
     features: [
-      "Api integrations",
+      "API integrations",
       "Bussines proposals",
-      "Any kind of question"
+      
 
     ],
   },
