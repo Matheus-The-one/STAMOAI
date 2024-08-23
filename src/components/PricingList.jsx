@@ -29,7 +29,7 @@ const PricingList = () => {
 
           <Button
             className="w-full mb-6"
-            href={item.price ? "/pricing" : ""}
+            href={item.price ? "/pricing" : "mailto:stamoi.ai.info@gmail.com"}
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact us"}
