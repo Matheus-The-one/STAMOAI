@@ -21,11 +21,11 @@ const Benefits = () => {
         videoElement.play();
       };
 
-      window.addEventListener('click', handleUserInteraction, { once: true });
+      
       window.addEventListener('scroll', handleUserInteraction, { once: true });
 
       return () => {
-        window.removeEventListener('click', handleUserInteraction);
+       
         window.removeEventListener('scroll', handleUserInteraction);
       };
     }, []);

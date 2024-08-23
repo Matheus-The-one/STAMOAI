@@ -1,10 +1,7 @@
 import {
   video1,
   video2,
-  benefitIcon1,
-  benefitIcon2,
-  benefitIcon3,
-  benefitIcon4,
+  
   benefitImage2,
   chromecast,
   disc02,
@@ -272,7 +269,7 @@ export const benefits = [
     id: "0",
     title: "",
     text: "",
-    backgroundUrl: "./src/assets/benefits/card-1.svg",
+   
     videoUrl:video1,
     imageUrl: benefitImage2,
     
@@ -281,7 +278,7 @@ export const benefits = [
     id: "1",
     title: "",
     text: "",
-    backgroundUrl: "/src/assets/benefits/card-2.svg",
+    
     videoUrl:video2,
     imageUrl: benefitImage2,
     light: true,
@@ -291,15 +288,13 @@ export const benefits = [
     title: "",
     text: "",
     videoUrl:video3,
-    backgroundUrl: "/src/assets/benefits/card-3.svg",
-    iconUrl: benefitIcon3,
+    
     imageUrl: benefitImage2,
   },
   {
     id: "3",
     title: "",
     text: "",
-    backgroundUrl: "/src/assets/benefits/card-4.svg",
     videoUrl:video4,
     imageUrl: benefitImage2,
     light: true,
@@ -308,7 +303,7 @@ export const benefits = [
     id: "4",
     title: "",
     text: "",
-    backgroundUrl: "./src/assets/benefits/card-5.svg",
+   
     videoUrl:video5,
     imageUrl: benefitImage2,
   },
@@ -316,7 +311,7 @@ export const benefits = [
     id: "5",
     title: "",
     text: "",
-    backgroundUrl: "/src/assets/benefits/card-6.svg",
+   
     videoUrl: video6,
     imageUrl: benefitImage2,
   },
