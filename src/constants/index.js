@@ -222,6 +222,7 @@ export const pricing = [
       "Unlimited Generations",
       "Limited Downloads",
       "Time Limit: 1 week",
+      'Videos with Watermarks'
     ],
   },
   {
@@ -233,7 +234,8 @@ export const pricing = [
       "Unlimited Generations",
       "10 Videos download",
       "Watermark removal",
-      "Automated caption"
+      "Automated caption",
+      "AI voiceover",
     ],
   },
   {
@@ -243,7 +245,6 @@ export const pricing = [
     price: "24.99",
     features: [
       "Unlimited Downloads",
-      "AI voiceover",
       "Access to specially trained AI models",
       "Video custumization",
       "Uploading or choosing text fonts",
