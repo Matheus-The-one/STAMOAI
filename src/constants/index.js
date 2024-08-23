@@ -231,7 +231,7 @@ export const pricing = [
     id: "1",
     title: "Premium",
     description: "Advanced AI chatbot, priority support, analytics dashboard",
-    price: "5.99",
+    price: "14.99",
     features: [
       "Unlimited Generations",
       "10 Videos Downlaod",
@@ -243,7 +243,7 @@ export const pricing = [
     id: "2",
     title: "Premium +",
     description: "Custom AI chatbot, advanced analytics, dedicated account",
-    price: "14.9",
+    price: "24.9",
     features: [
       "Unlimited Downloads",
       "AI voiceover",
