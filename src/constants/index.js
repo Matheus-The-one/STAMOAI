@@ -39,6 +39,7 @@ import {
   video4,
   video5,
   yourlogo,
+  video6,
 } from "../assets";
 
 export const navigation = [
@@ -311,7 +312,7 @@ export const benefits = [
     title: "",
     text: "",
     backgroundUrl: "/src/assets/benefits/card-6.svg",
-    
+    videoUrl: video6,
     imageUrl: benefitImage2,
   },
 ];
