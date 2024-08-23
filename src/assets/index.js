@@ -62,8 +62,8 @@ import benefitImage2 from "./benefits/image-2.png";
 
 import discordBlack from "./socials/discord.svg";
 import facebook from "./socials/facebook.svg";
-import instagram from "./socials/instagram.svg";
-import telegram from "./socials/telegram.svg";
+import instagram from "./socials/linkedin.svg";
+import telegram from "./socials/tiktok-icon.svg";
 import twitter from "./socials/twitter.svg";
 import video4 from './benefits/4.mp4';
 import video5 from './benefits/5.mp4';
