@@ -234,7 +234,7 @@ export const pricing = [
     price: "14.99",
     features: [
       "Unlimited Generations",
-      "10 Videos downlaod",
+      "10 Videos download",
       "Watermark removal",
       "Automated caption"
     ],
@@ -260,7 +260,7 @@ export const pricing = [
     price: null,
     features: [
       "API integrations",
-      "Bussines proposals",
+      "Business proposals",
       
 
     ],
