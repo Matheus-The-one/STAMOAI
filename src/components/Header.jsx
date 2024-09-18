@@ -77,6 +77,7 @@ const Header = () => {
               <SignOutButton>
                 <Button className="ml-4">Sign Out</Button>
               </SignOutButton>
+              
             </div>
           ) : (
             <SignInButton mode="modal">

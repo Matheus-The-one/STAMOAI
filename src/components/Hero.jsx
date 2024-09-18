@@ -7,11 +7,12 @@ import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
+import { useUser } from "@clerk/clerk-react";
 import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
-
+  const { isSignedIn } = useUser();
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -36,13 +37,14 @@ const Hero = () => {
             </span>
           </h1>
           
-          <Button className="mx-4" href="/pricing" >
-            Generate here
-          </Button>
           
-          <Button className="m-4 mx-8" href="/pricing" >
-            Get Extension
-          </Button>
+          {isSignedIn && (
+          <Button className="mx-4" href="https://sea-turtle-app-33lfk.ondigitalocean.app/" >
+          <a href="https://sea-turtle-app-33lfk.ondigitalocean.app/">Get Demo</a>
+        </Button>
+        )}
+          
+          
          
         </div>
         <div className="">
