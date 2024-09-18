@@ -1,16 +1,17 @@
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-
+import { SignInButton, UserButton, SignOutButton, useUser } from "@clerk/clerk-react";
 import { brainwaveSymbol } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
 
 const Header = () => {
-  const pathname = useLocation();
-  const [openNavigation, setOpenNavigation] = useState(false);
+  const { pathname } = useLocation();
+  const [openNavigation, setOpenNavigation] = React.useState(false);
+  const { isSignedIn, user } = useUser();
 
   const toggleNavigation = () => {
     if (openNavigation) {
@@ -24,7 +25,6 @@ const Header = () => {
 
   const handleClick = () => {
     if (!openNavigation) return;
-
     enablePageScroll();
     setOpenNavigation(false);
   };
@@ -37,8 +37,9 @@ const Header = () => {
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="block w-[12rem] xl:mr-8" href="#hero">
-        
-          <h1 className="flex p-0 m-0 w-[230px] h-[100px] items-center justify-center"  ><img src={brainwaveSymbol} alt="stamo"  /></h1>
+          <h1 className="flex p-0 m-0 w-[230px] h-[100px] items-center justify-center">
+            <img src={brainwaveSymbol} alt="stamo" />
+          </h1>
         </a>
 
         <nav
@@ -68,10 +69,21 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        
-        <Button className="hidden lg:flex" href="/#pricing">
-          Demo
-        </Button>
+        <div className="hidden lg:flex items-center ml-auto">
+          {isSignedIn ? (
+            <div className="flex items-center">
+              <span className="text-n-1 mr-4">Hello, {user.firstName || user.username}!</span>
+              <UserButton afterSignOutUrl="/" />
+              <SignOutButton>
+                <Button className="ml-4">Sign Out</Button>
+              </SignOutButton>
+            </div>
+          ) : (
+            <SignInButton mode="modal">
+              <Button>Sign In</Button>
+            </SignInButton>
+          )}
+        </div>
 
         <Button
           className="ml-auto lg:hidden"
