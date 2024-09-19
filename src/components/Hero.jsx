@@ -7,12 +7,13 @@ import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
 import Notification from "./Notification";
-import { useUser } from "@clerk/clerk-react";
+import { useUser, SignInButton } from "@clerk/clerk-react";
 import CompanyLogos from "./CompanyLogos";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
   const { isSignedIn } = useUser();
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -37,31 +38,27 @@ const Hero = () => {
             </span>
           </h1>
           
-          
-          {isSignedIn && (
-          <Button className="mx-4" href="https://sea-turtle-app-33lfk.ondigitalocean.app/" >
-          <a href="https://sea-turtle-app-33lfk.ondigitalocean.app/">Get Demo</a>
-        </Button>
-        )}
-          
-          
-         
+          {isSignedIn ? (
+            <Button className="mx-4" href="https://sea-turtle-app-33lfk.ondigitalocean.app/">
+              Get Demo
+            </Button>
+          ) : (
+            <SignInButton mode="modal">
+              <Button className="mx-4">
+                Get Started
+              </Button>
+            </SignInButton>
+          )}
         </div>
-        <div className="">
         
+        <div className="">
           <div className="">
             <div className="">
               <div className="" />
-
               <div className="">
-               
-
-                
-
+                {/* Content for this div */}
               </div>
             </div>
-
-           
           </div>
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
@@ -72,13 +69,13 @@ const Hero = () => {
               alt="hero"
             />
           </div>
-
+          
           <BackgroundCircles />
         </div>
-
+        
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
       </div>
-
+      
       <BottomLine />
     </Section>
   );
