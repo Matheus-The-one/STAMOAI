@@ -48,22 +48,57 @@ const Header = () => {
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
-            ))}
+            {navigation.map((item) => {
+              if (item.id === "4" || item.id === "5") {
+                // Special handling for sign up and sign in on mobile
+                if (item.id === "4" && !isSignedIn) {
+                  return (
+                    <SignInButton key={item.id} mode="modal">
+                      <button className="block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 lg:hidden px-6 py-6 md:py-8">
+                        {item.title}
+                      </button>
+                    </SignInButton>
+                  );
+                } else if (item.id === "5" && !isSignedIn) {
+                  return (
+                    <SignInButton key={item.id} mode="modal">
+                      <button className="block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 lg:hidden px-6 py-6 md:py-8">
+                        {item.title}
+                      </button>
+                    </SignInButton>
+                  );
+                } else {
+                  return null; // Don't show these items if user is signed in
+                }
+              }
+              
+              return (
+                <a
+                  key={item.id}
+                  href={item.url}
+                  onClick={handleClick}
+                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                    item.onlyMobile ? "lg:hidden" : ""
+                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                    item.url === pathname.hash
+                      ? "z-2 lg:text-n-1"
+                      : "lg:text-n-1/50"
+                  } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+                >
+                  {item.title}
+                </a>
+              );
+            })}
+            
+            {isSignedIn && (
+              <div className="lg:hidden flex flex-col items-center mt-4">
+                <span className="text-n-1 mb-2">Hello, {user.firstName || user.username}!</span>
+                <UserButton afterSignOutUrl="/" />
+                <SignOutButton>
+                  <Button className="mt-2">Sign Out</Button>
+                </SignOutButton>
+              </div>
+            )}
           </div>
 
           <HamburgerMenu />
@@ -77,7 +112,6 @@ const Header = () => {
               <SignOutButton>
                 <Button className="ml-4">Sign Out</Button>
               </SignOutButton>
-              
             </div>
           ) : (
             <SignInButton mode="modal">
