@@ -39,7 +39,7 @@ const Hero = () => {
           </h1>
           
           {isSignedIn ? (
-            <Button className="mx-4" href="https://sea-turtle-app-33lfk.ondigitalocean.app/">
+            <Button className="mx-4" href="https://stamoaitest-506123048659.us-central1.run.app/">
               Get Demo
             </Button>
           ) : (
